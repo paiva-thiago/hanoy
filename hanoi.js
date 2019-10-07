@@ -1,5 +1,6 @@
 
-const toTower = (x)=>x.map((x)=>`${x}<br/>`).join('')
+const toTower = (x)=>x.map((x)=>`<div class="block block-${x}"></div>`).join('')
+const colors =["#b71c1c", "#4caf50", "#01579b"];
 const final = [1,2,3]
 var towerA = [1,2,3]
 var towerB = []
@@ -9,6 +10,14 @@ const refresh = ()=>{
   document.getElementById('towerA').innerHTML = toTower(towerA)
   document.getElementById('towerB').innerHTML = toTower(towerB)
   document.getElementById('towerC').innerHTML = toTower(towerC)
+  
+  const classes = [...document.getElementsByClassName('block')];
+
+  classes.map((item) => {
+    const index = parseInt(item.className.substr(-1));
+    item.style.backgroundColor = colors[index - 1];
+    item.style.width = `calc( 100% - ${80/index}px )`
+  })
 }
 
 refresh();
