@@ -1,0 +1,14 @@
+#game{
+  display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+.tower{
+  border:1px solid black;
+}
+.bloco{
+    display:none;
+}
+.bloco::after{
+  content:"___";
+}
