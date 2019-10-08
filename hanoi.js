@@ -6,6 +6,8 @@ var towerA = [1,2,3]
 var towerB = []
 var towerC = []
 
+let movesCounter = 0;
+
 const refresh = ()=>{
   document.getElementById('towerA').innerHTML = toTower(towerA)
   document.getElementById('towerB').innerHTML = toTower(towerB)
@@ -17,7 +19,9 @@ const refresh = ()=>{
     const index = parseInt(item.className.substr(-1));
     item.style.backgroundColor = colors[index - 1];
     item.style.width = `calc( 100% - ${80/index}px )`
-  })
+  });
+
+  document.getElementById('moves-number').innerHTML = movesCounter;
 }
 
 refresh();
@@ -29,12 +33,14 @@ const move = (from,to)=>{
   }
   if((to.length==0)||(to[0]>from[0])){
     to.unshift(from.shift())
+    movesCounter++;
     refresh()
   }else{
     alert("movimento inválido!")
     return
   }
   if(toTower(towerC)==toTower(final)){
+    movesCounter++;
     alert("Missão Cumprida!")
   }
 }
