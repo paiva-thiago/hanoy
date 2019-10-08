@@ -6,10 +6,13 @@ var towerA = [1,2,3]
 var towerB = []
 var towerC = []
 
+var moves = 0;
+
 const refresh = ()=>{
   document.getElementById('towerA').innerHTML = toTower(towerA)
   document.getElementById('towerB').innerHTML = toTower(towerB)
   document.getElementById('towerC').innerHTML = toTower(towerC)
+  document.getElementById('moves').innerHTML = moves;
   
   const classes = [...document.getElementsByClassName('block')];
 
@@ -29,6 +32,7 @@ const move = (from,to)=>{
   }
   if((to.length==0)||(to[0]>from[0])){
     to.unshift(from.shift())
+    moves = moves+1;
     refresh()
   }else{
     alert("movimento inválido!")
