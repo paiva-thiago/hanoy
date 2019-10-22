@@ -1,6 +1,6 @@
 # Hanoy
 
-Uma [https://pt.wikipedia.org/wiki/Torre_de_Han%C3%B3i](https://www.somatematica.com.br/jogos/hanoi/) grossona. / A row [hanoi tower](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
+Uma [https://pt.wikipedia.org/wiki/Torre_de_Han%C3%B3i](https://www.somatematica.com.br/jogos/hanoi/) grossona. / A raw [hanoi tower](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
 
 Faltando Colocar
 
